@@ -1,0 +1,195 @@
+/*总体样式*/
+*{
+	margin: 0;
+	padding: 0;
+	color: #717171;
+}
+a{
+	text-decoration: none;
+}
+
+.header{
+	width: 100%;
+	height: 0.95rem;
+	background-color: #ffdb2c;
+}
+.title{
+	height: 0.95rem;
+	width: 0.68rem;
+	margin-left: 3.42rem;
+	float: left;
+}
+.jujia{
+	padding-top: 0.2rem;
+	float: left;
+	font-size: 0.33rem;
+}
+.img img{
+	padding-top: 3px;
+	width: 0.68rem;
+	float: left;
+}
+.search{
+	float: right;
+	height: 0.95rem;
+	width: 0.8rem;
+	text-align: center;
+	
+}
+.search img{
+	width: 0.45rem;
+	padding-bottom: 0.3rem;
+}
+
+
+/*导航*/
+.nav{
+	height: 0.9rem;
+	width: 100%;
+}
+.nav ul li{
+	float: left;
+	font-size: 0.3rem;
+	list-style: none;
+	line-height: 0.84rem;
+	width: 25%;
+	text-align: center;
+}
+.first_li{
+	border-bottom: 0.08rem #ffdb2c solid;
+}
+
+/*背景轮播图*/
+.banner{
+	width: 100%;
+	height: 3.22rem;
+}
+.banner img{
+	width: 100%;
+}
+.hot{
+	height: 1.1rem;
+	width: 100%;
+	background-image:url(../img/bg_hot_02.png) ;
+	position: relative;
+	margin-bottom: 0.26rem;
+}
+.hot img{
+	height: 1.1rem;
+	padding-top: 5px;
+}
+.hot_ch{
+	font-size: 0.36rem;
+	position: absolute;
+	left: 2.96rem;
+	top: 0.3rem;	
+}
+.hot_en{
+	font-size: 0.3rem;
+	color: #000;
+	font-weight:100;
+	letter-spacing: 3px;
+	position: absolute;
+	left: 2.09rem;
+	top: 0.81rem;
+}
+.content{
+	margin-top: ;
+}
+.item1,.item2{
+	float: left;
+	
+
+} 
+.item1 img,.item2 img{
+	width: 3.32rem;
+}
+.item1{
+	margin-left: 0.32rem;
+	position: relative;
+}
+.item2{
+	margin-left: 0.25rem;
+	position: relative;
+}
+.bg_gray{
+	position: absolute;
+	top: 1.62rem;
+	width: 100%;
+	height: 0.6rem;
+	background-color: rgba(0,0,0,0.3);
+}
+.item1 .p,.item2 .p{
+	width: 1.8rem;
+	text-align: center;
+	font-size: 0.22rem;
+	position: absolute;
+	top: 1.81rem;
+	left: 0.78rem;
+	color: #fff;	
+}
+
+.line_left img{
+	height: 0.01rem;
+	width: 0.31rem;
+	position: absolute;
+	top: 1.92rem;
+	left: 0.4rem;
+}
+.line_right img{
+	height: 0.01rem;
+	width: 0.31rem;
+	position: absolute;
+	top: 1.92rem;
+	right: 0.4rem;
+}
+.item1 .star_red img,.item2 .star_red img{
+	width: 0.53rem;
+	height: 0.53rem;
+	position: absolute;
+	top: 1.18rem;
+	right: 0.24rem;
+}
+
+/*底部*/
+.footer{
+	height: 0.98rem;
+	width: 100%;
+	border-top: 1px gray solid;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+}
+.item{
+	height: 0.98rem;
+	width: 20%;
+	float: left;
+	
+}
+.item .item_pic{
+	width: 20%;
+	text-align: center;
+}
+.item_pic_add{
+	width: 20%;
+}
+.item_pic_add img{
+	width: 0.84rem;
+	position: absolute;
+	top: 0.1rem;
+	padding-left: 0.35rem;
+}
+.item .item_pic img{
+	width: 0.53rem;
+	position: absolute;
+	top: 0.2rem;
+	padding-left: 0.3rem;
+}
+.footer .item .item_p{
+	font-size: 0.22rem;
+	position: absolute;
+	width: 20%;
+	top:0.65rem;
+	text-align: center;
+}
