@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet"href="css/login.css" />
+    
+    <script type="text/javascript" src="js/jquery-2.2.2.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <title>login</title>
+	
+    
+</head>
+	<body>
+		<div data-role="page" id="pageone">
+			
+			<div data-role = "content" id="content">
+				<img src="img/qq_logo.png" />
+				<form method="get">
+					<label for="userID" class="ui-hidden-accessible">姓名</label>
+					<input type="text" name="userID" class="fname" placeholder="用户名" />
+					<a href="register.html" class="zhuce">点击注册</a>
+					<label for="password" class="ui-hidden-accessible">姓名</label>
+					<input type="password" name="password" class="password" id="password" placeholder="密码" />
+					<a href="#" class="wangji">忘记密码</a>
+					<input type="submit" data-inline="true" value="登录" id="submit" />
+					
+				</form>
+			</div>
+			
+		</div>
+
+		
+	</body>
+	
+	<script>
+		$('#submit').click(function(){
+			var userID = $('.fname').val();
+			var psw = $('.password').val();
+			 $.ajax({
+			 	type:'get',
+			 	url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			 	data:{
+			 		status:'login',userID:userID,password:psw
+			 	},
+			 	dataType:'json',
+			 	success:function(data){
+			 		if(data == 0){
+			 			alert('用户名不正确！');
+			 		}else if(data == 2){
+			 			alert('密码不正确！')
+			 		}else{
+			 			alert(data.userID+' 成功登录');
+//			 			$.mobile.loadPage('message.html');
+//			 			$.mobile.changePage('message.html');
+						location.href="message.html";
+
+			 		}
+			 	},
+			 	error:function(){
+			 		alert('error');
+			 	}
+			 });
+	 });
+	</script>
+</html>

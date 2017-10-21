@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet"href="css/login.css" />
+    
+    <script type="text/javascript" src="js/jquery-2.2.2.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+    <script type="text/javascript" src="js/rem.js" ></script>
+    <title>register</title>
+
+    
+</head>
+	<body>
+		<div data-role="page" id="pageone">
+			<div data-role = "content" id="content">
+				<img src="img/qq_logo.png" />
+				<form method="get">
+					<label for="userID" class="ui-hidden-accessible">姓名</label>
+					<input type="text" name="userID" class="fname" placeholder="手机号" />
+					<a href="login.html" class="zhuce">已经注册</a>
+					<label for="password" class="ui-hidden-accessible">姓名</label>
+					<input type="password" name="password" class="password" placeholder="密码" />
+					<a href="#" class="wangji"></a>
+					
+					<input type="submit" data-inline="true" value="点击注册" id="submit2"/>
+					
+				</form>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('#submit2').click(function(){
+			var name = $('.fname').val();
+			var psw = $('.password').val();
+			 $.ajax({
+			 	type:'get',
+			 	url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			 	data:{
+			 		status:'register',userID:name,password:psw
+			 	},
+			 	//dataType:'json',
+			 	success:function(data){		 		
+					if(data == '0'){
+						console.log('data=0 重名')
+					}
+					else if(data == '1'){
+						console.log('data=1 成功注册');
+					}
+					else{
+						console.log('用户名:',data.userID,'密码：',data.password,'成功注册')
+					}					
+			 	},error:function(){
+			 		alert('cuowu');
+			 	}
+			 });
+	 	});
+	</script>
+</html>
